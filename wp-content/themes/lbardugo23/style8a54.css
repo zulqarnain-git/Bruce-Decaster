@@ -1,0 +1,60 @@
+/* 
+Theme Name: Leigh Bardugo 2023
+Theme URI: https://leighbardugo.com
+Description: Leigh Bardugo 2023 is a child theme of Hello Elementor
+Author: Moxie Design Studios
+Author URI: https://moxiedesignstudios.com
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+.page-content a {
+	text-decoration: none !important;
+}
+
+.page-template-elementor_theme h1,
+.page-template-elementor_theme h2,
+.page-template-elementor_theme h3,
+.page-template-elementor_theme h4,
+.page-template-elementor_theme h5,
+.page-template-elementor_theme h6 {
+	font-weight: normal;
+	text-transform: none;
+	font-family: 'Lora', 'serif';
+}
+
+.page-template-elementor_theme h3, 
+.page-template-elementor_theme h4 {
+	color: #8B887D;
+	font-weight: normal;
+}
+
+.page-template-elementor_theme hr {
+	margin: 40px 0px; 
+	border: 1px solid #1c2f3f;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+	padding-top: 40px !important;
+}
+
+
+
+
+.tribe-common .tribe-common-h5, .tribe-common .tribe-common-h6 {
+	font-weight: normal !important;
+	font-style: italic !important;
+}
+
+.tribe-events .tribe-events-calendar-list__event-title-link:active, .tribe-events .tribe-events-calendar-list__event-title-link:focus, .tribe-events .tribe-events-calendar-list__event-title-link:hover {
+	border: 0;
+	color: #dfb03c;
+}

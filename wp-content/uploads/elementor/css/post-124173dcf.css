@@ -1,0 +1,50 @@
+.elementor-kit-12417{--e-global-color-primary:#000000;--e-global-color-secondary:#111111;--e-global-color-text:#333333;--e-global-color-accent:#493547;--e-global-color-7dcb736:#000000;--e-global-color-e4c33f9:#FFFFFF;--e-global-color-dbb9447:#111111;--e-global-color-b93d943:#605C74;--e-global-color-304984a:#493547;--e-global-color-be04b73:#113756;--e-global-color-b23caee:#8B887D;--e-global-color-2705870:#BE9B60;--e-global-color-a3bf90f:#49615E;--e-global-typography-primary-font-family:"Cinzel";--e-global-typography-primary-font-weight:400;--e-global-typography-secondary-font-family:"Cinzel Decorative";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Lora";--e-global-typography-text-font-size:18px;--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Cinzel Decorative";--e-global-typography-accent-font-weight:500;background-color:#FFFFFF;font-family:var( --e-global-typography-text-font-family ), serif;font-size:var( --e-global-typography-text-font-size );font-weight:var( --e-global-typography-text-font-weight );}.elementor-kit-12417 e-page-transition{background-color:#FFBC7D;}.elementor-kit-12417 a{color:var( --e-global-color-2705870 );}.elementor-kit-12417 a:hover{color:var( --e-global-color-b93d943 );}.elementor-kit-12417 h1{color:var( --e-global-color-b93d943 );font-family:var( --e-global-typography-secondary-font-family ), serif;font-weight:var( --e-global-typography-secondary-font-weight );}.elementor-kit-12417 h2{color:var( --e-global-color-2705870 );font-family:var( --e-global-typography-secondary-font-family ), serif;font-weight:var( --e-global-typography-secondary-font-weight );}.elementor-kit-12417 h3{color:var( --e-global-color-304984a );font-family:var( --e-global-typography-primary-font-family ), serif;font-weight:var( --e-global-typography-primary-font-weight );}.elementor-kit-12417 h4{color:var( --e-global-color-b93d943 );font-family:var( --e-global-typography-primary-font-family ), serif;font-weight:var( --e-global-typography-primary-font-weight );}.elementor-kit-12417 h5{color:var( --e-global-color-304984a );font-family:var( --e-global-typography-primary-font-family ), serif;font-weight:var( --e-global-typography-primary-font-weight );}.elementor-kit-12417 h6{color:var( --e-global-color-b93d943 );font-family:var( --e-global-typography-primary-font-family ), serif;font-weight:var( --e-global-typography-primary-font-weight );}.elementor-kit-12417 button,.elementor-kit-12417 input[type="button"],.elementor-kit-12417 input[type="submit"],.elementor-kit-12417 .elementor-button{font-family:var( --e-global-typography-accent-font-family ), serif;font-weight:var( --e-global-typography-accent-font-weight );color:var( --e-global-color-e4c33f9 );border-radius:0px 0px 0px 0px;}.elementor-kit-12417 button:hover,.elementor-kit-12417 button:focus,.elementor-kit-12417 input[type="button"]:hover,.elementor-kit-12417 input[type="button"]:focus,.elementor-kit-12417 input[type="submit"]:hover,.elementor-kit-12417 input[type="submit"]:focus,.elementor-kit-12417 .elementor-button:hover,.elementor-kit-12417 .elementor-button:focus{color:var( --e-global-color-e4c33f9 );}.elementor-kit-12417 input:not([type="button"]):not([type="submit"]),.elementor-kit-12417 textarea,.elementor-kit-12417 .elementor-field-textual{border-radius:0px 0px 0px 0px;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;--widgets-spacing-row:20px;--widgets-spacing-column:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1024px){.elementor-kit-12417{font-size:var( --e-global-typography-text-font-size );}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-kit-12417{font-size:var( --e-global-typography-text-font-size );}.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}/* Start custom CSS */.book-news ul {
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0
+}
+
+.book-news li {
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(96,92,116,.5);
+    color: #8b887d;
+}
+
+.book-news li:last-of-type {
+    border-bottom: 0;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-venue {
+    font-size: 20px !important;
+    line-height: 120%;
+	font-style: italic !important; 
+	font-weight: 600;
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-h4--min-medium {
+    font-size: var(--tec-font-size-5);
+    line-height: var(--tec-line-height-1);
+    	font-style: normal !important;    
+
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-details {
+    width: calc(var(--tec-grid-width-1-of-8)*8) !important;
+}
+
+.tribe-events-calendar-list__event-datetime-wrapper.tribe-common-b2 {
+    font-weight: 600 !important;
+}
+
+.tribe-common a:not(.tribe-common-anchor--unstyle):hover {
+    color: #BE9B60;
+}
+
+.tribe-common a:not(.tribe-common-anchor--unstyle):visited {
+    color: #113756;
+}
+
+.tribe-events-calendar-list__event-venue-title.tribe-common-b2--bold:after {
+    content: '\2014 ';
+    display: inline-block;
+}/* End custom CSS */

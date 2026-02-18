@@ -1,0 +1,522 @@
+#tribe-events-pg-template {
+    max-width: initial;
+    padding: 0;
+}
+
+.espbp-meta-wrp {
+    display: flex;
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    flex-direction: var(--flex-direction);
+    flex-wrap: var(--flex-wrap);
+    align-content: var(--align-content);
+    gap: var(--gap);
+    text-align: var(--justify-content);
+    
+}
+.espbp-acf-wrapper {
+    --flex-direction:column;
+    display: flex;
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    flex-direction: var(--flex-direction);
+    flex-wrap: var(--flex-wrap);
+    align-content: var(--align-content);
+    gap: var(--gap);
+    text-align: var(--justify-content);
+    
+}
+.espbp-evt-org, .espbp-evt-org > a {
+    display: flex;
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    flex-direction: var(--flex-direction);
+    flex-wrap: var(--flex-wrap);
+    align-content: var(--align-content);
+    gap: var(--gap);
+    text-align: var(--justify-content);
+}
+
+.event-tickets .tribe-tickets__rsvp-wrapper {
+    margin-top: 0 !important;
+    max-width: 100% !important;
+}
+
+.event-tickets .tribe-tickets__rsvp-wrapper .event-tickets .tribe-tickets__rsvp {
+    margin: 0;
+    padding: 56px 21px;
+}
+
+
+.event-tickets .tribe-tickets__tickets-form,
+.event-tickets .tribe-tickets__tickets-form {
+    background-color: transparent !important;
+    margin: 0 !important;
+}
+
+#tribe-tickets__tickets-form {
+    max-width: 100%;
+    padding: 56px 21px;
+}
+
+p.espbp-tribe-events-back {
+    margin: 0;
+}
+
+.rtec-form-toggle-button:focus {
+    outline: none;
+}
+
+.espbp-featured-img img {
+    line-height: 0;
+}
+
+.espbp-featured-img {
+    line-height: 0;
+    overflow: hidden;
+}
+
+:root {
+    --espbp-link-bg-color: transparent;
+    --espbp-link-color: #0D95C7;
+    --espbp-link-hvr-color: #0D95C7;
+    --espbp-link-align: left;
+    --espbp-title-alignment: left;
+    --espbp-title-color: #0D95C7;
+    --espbp-title-hvr-color: #0D95C7;
+    --espbp-cost-color: #0D95C7;
+    --espbp-cost-alignment: left;
+    --espbp-cost-hvr-color: black;
+    --espbp-status-label-color: black;
+    --espbp-reson-color: black;
+    --espbp-tooltip-alignment: left;
+    --espbp-excerpt-color: black;
+    --espbp-excerpt-hvr-color: none;
+    --espbp-export-link-color: #222;
+    --espbp-export-link-alignment: center;
+    --espbp-export-border-radius: 0;
+    --espbp-export-link-margin: 0;
+    --espbp-export-link-padding: 0;
+    --espbp-export-box-padding: 0;
+    --espbp-export-box-margin: 0;
+    --espbp-img-alignment: left;
+    --espb-image-width: auto;
+    --espb-image-max-width: 100%;
+    --espb-image-height: auto;
+    --espbp-image-opacity: 1;
+    --espbp-image-opacity-hvr: 1;
+    --espbp-img-transition-duration: 3s;
+    --espbp-img-border-radius: 0;
+    --espbp-meta-detail-color: black;
+    --espbp-meta-detail-sub-color: black;
+    --espbp-meta-detail-alignment: left;
+    --espbp-add-field-label-color: black;
+    --espbp-add-field-value-color: black;
+    --espbp-add-field-border-radius: 0;
+    --espbp-add-field-padding: 0;
+    --espbp-add-field-alignment: left;
+    --espbp-footer-title-color: #ffffff;
+    --espbp-footer-hvr-color: #ffffff;
+    --espbp-footer-bg-color: #0D95C7;
+    --espbp-footer-bg-hvr-color: #0D95C7;
+    --espbp-footer-bd-rd-color: 0;
+    --espbp-footer-bd-mr-color: 5px 0px 0px 0px;
+    --espbp-time-title-color: #222;
+    --espbp-time-hvr-color: #222;
+    --espbp-time-alignment: left;
+    --espbp-evt-schd-color: #222;
+    --espbp-evt-schd-hvr-color: #222;
+    --espbp-evt-schd-bg-color: transparent;
+    --espbp-evt-schd-alignment: left;
+    --espbp-org-label-color: #222;
+    --espbp-org-content-color: #222;
+    --espbp-org-alignment-color: #222;
+    --espbp-evt-cf-color:#222;
+    --espbp-evt-acf-color:#222;
+    --espbp-evt-acf-text-color:#222;
+    --espbp-evt-series-color:#222;
+    --espbp-evt-series-alignment:left;
+    --espbp-direction-acf-field:row;
+    --espbp-direction-csf-field:row;
+    --espbp-acf-gap-field:2px;
+    --espbp-csf-gap-field:2px;
+    --espbp-evt-sub-series-color:#222;
+    --espbp-evt-details-color:#222;
+    
+}
+
+
+/* All events Widget CSS */
+
+.espbp-tribe-events-back {
+    background: var(--espbp-link-bg-color);
+    color: var(--espbp-link-color);
+}
+.espbp-tribe-events-back:hover{
+    color: var(--espbp-link-hvr-color);
+}
+
+.espbp-evt-all-link .espbp-tribe-events-back a {
+    color: var(--espbp-link-color);
+    text-decoration: none;
+}
+
+.espbp-tribe-events-back a:hover {
+    color: var(--espbp-link-hvr-color);
+}
+
+.espbp-evt-all-link {
+    text-align: var(--espbp-link-align);
+}
+
+
+/* Title widget css */
+
+.espbp-event-title {
+    color: var(--espbp-title-color) !IMPORTANT;
+    margin: 0;
+    text-align: var(--espbp-title-alignment);
+}
+span.espbp-event-title {
+    display: flex;
+    justify-content: var(--espbp-title-alignment);
+    color: var(--espbp-title-color) !IMPORTANT;
+    margin: 0;
+}
+
+/* .espbp-event-title:hover {
+    color: var(--espbp-title-hvr-color);
+} */
+
+
+/* Cost Widget CSS */
+
+.espbp-events-cost span {
+    color: var(--espbp-cost-color);
+}
+
+.espbp-events-cost {
+    text-align: var(--espbp-cost-alignment);
+}
+
+.espbp-events-cost span:hover {
+    color: var(--espbp-cost-hvr-color);
+}
+
+
+/* Event Status Widget CSS */
+
+.espbp-labels-scheduled,
+.espbp-labels-canceled,
+.espbp-labels-postponed,
+.espbp-separator-event {
+    color: var(--espbp-status-label-color);
+}
+
+.espbp-reason {
+    color: var(--espbp-reson-color);
+}
+
+.espbp-tool-tip-wrapper {
+    text-align: var(--espbp-tooltip-alignment);
+}
+
+
+/* Event excerpt widget css
+*/
+
+.espbp-evt-excerpt,
+.espbp-evt-excerpt p {
+    color: var(--espbp-excerpt-color);
+    text-align: var(--espbp-excerpt-alignment);
+}
+
+/* .espbp-evt-excerpt:hover,
+.espbp-evt-excerpt p:hover {
+    color: var(--espbp-excerpt-hvr-color);
+} */
+
+
+/* Event google cal widget css */
+
+.espbp-events-links span.espbp-gcal-button a,
+.espbp-events-links span.espbp-ical-button a,
+.espbp-events-links span.espbp-outlook-button a {
+    color: var(--espbp-export-link-color);
+    text-decoration: none;
+}
+
+.espbp-events-links {
+    text-align: var(--espbp-export-link-alignment);
+    padding: var(--espbp-export-box-padding);
+    margin: var(--espbp-export-box-margin);
+}
+
+.espbp-events-links span.espbp-gcal-button,
+.espbp-events-links span.espbp-ical-button,
+.espbp-events-links span.espbp-outlook-button {
+    border-radius: var(--espbp-export-border-radius);
+}
+
+.espbp-gcal-button,
+.espbp-ical-button ,
+.espbp-outlook-button{
+    margin: var(--espbp-export-link-margin);
+    padding: var(--espbp-export-link-padding);
+}
+
+
+/* Image widget CSS */
+
+.espbp-featured-img {
+    text-align: var(--espbp-img-alignment);
+}
+
+.espbp-featured-img img {
+    width: var(--espb-image-width);
+    max-width: var(--espb-image-max-width);
+    height: var(--espb-image-height);
+    opacity: var(--espbp-image-opacity);
+    border-radius: var(--espbp-img-border-radius);
+}
+
+.espbp-featured-img img:hover{
+    opacity: var(--espbp-image-opacity-hvr);
+}
+.espbp-featured-img img:hover,.espbp-featured-img:hover{
+    transition-duration: var(--espbp-img-transition-duration)
+}
+
+
+/* Meta detail widget CSS */
+
+.espbp-title,
+.espbp-date-lbl,
+.espbp-web-url-lbl,
+.espbp-evt-time-label,
+.espbp-tribe-tag-label,
+.espbp-meta-event-categories-label,
+.espbp-tribe-cate-label,
+
+.espbp-cost-lbl {
+    color: var(--espbp-meta-detail-color);
+}
+
+.espbp-content-wrp,
+.espbp-content-wrp a
+
+/* .espbp-sub-title,
+.espbp-events-schedule,
+.espbp-cost-sub-lbl,
+.espbp-evt-time-sublabel,
+.espbp-content-wrp .espbp-tribe-tag-meta a,
+.espbp-content-wrp .espbp-tribe-tag-meta i,
+.espbp-content-wrp .espbp-meta-event-categories,
+.espbp-content-wrp .espbp-meta-event-categories a,
+.espbp-content-wrp .espbp-meta-event-categories i,
+.espbp-content-wrp .espbp-web-url-text a, */
+    {
+    color: var(--espbp-meta-detail-sub-color);
+}
+
+.espbp-meta-wrp {
+    text-align: var(--espbp-meta-detail-alignment);
+    overflow: hidden;
+}
+
+
+/* Add field widget CSS 
+*/
+
+.espbp-meta-additional-field .espbp-add-label {
+    color: var(--espbp-add-field-label-color);
+}
+
+.espbp-meta-additional-field .espbp-tribe-meta-value {
+    color: var(--espbp-add-field-value-color);
+}
+
+.espba-additional-field {
+    border-radius: var(--espbp-add-field-border-radius);
+    text-align: var(--espbp-add-field-alignment)
+}
+
+.espba-additional-field {
+    padding: var(--espbp-add-field-padding);
+    margin: var(--espbp-add-field-margin);
+}
+
+.espbp-event-map {
+    text-align: var(--espbp-title-alignment);
+}
+
+
+/* footer widget */
+
+.espbp-evt-footer .espbp-events-nav-next button,
+.espbp-evt-footer .espbp-events-nav-previous button,
+.espbp-evt-footer .espbp-events-nav-next button a,
+.espbp-evt-footer .espbp-events-nav-previous button a {
+    color: var(--espbp-footer-title-color);
+    text-decoration: none;
+}
+
+.espbp-events-nav-next button:hover,
+.espbp-events-nav-previous button:hover,
+.espbp-events-nav-next button:hover a,
+.espbp-events-nav-previous button:hover a {
+    color: var(--espbp-footer-hvr-color);
+}
+
+.espbp-events-nav-next button,
+.espbp-events-nav-previous button {
+    background-color: var(--espbp-footer-bg-color);
+    border-radius: var(--espbp-footer-bd-rd-color);
+    margin: var(--espbp-footer-bd-mr-color);
+}
+
+.espbp-events-nav-next button:hover,
+.espbp-events-nav-previous button:hover {
+    background-color: var(--espbp-footer-bg-hvr-color);
+}
+
+
+/**  Time widget */
+
+.espbp-evt-time {
+    color: var(--espbp-time-title-color);
+    text-align: var(--espbp-time-alignment);
+}
+
+.espbp-events-schedule .espbp-evt-time {
+    color: var(--espbp-evt-schd-color);
+}
+
+.espbp-events-schedule:hover .espbp-evt-time {
+    color: var(--espbp-evt-schd-hvr-color);
+}
+.espbp-meta-wrp .espbp-evt-time {
+    color: var(--espbp-meta-detail-sub-color);
+}
+.espbp-meta-wrp .espbp-evt-time:hover {
+    color: var(--espbp-meta-detail-sub-color);
+}
+
+.espbp-evt-time:hover {
+    color: var(--espbp-time-hvr-color);
+}
+
+
+
+
+.espbp-events-schedule:not(.espbp-meta-wrp .espbp-events-schedule) {
+    color: var(--espbp-evt-schd-color);
+    background-color: var(--espbp-evt-schd-bg-color);
+    text-align: var(--espbp-evt-schd-alignment);
+}
+
+.espbp-events-schedule:not(.espbp-meta-wrp .espbp-events-schedule):hover {
+    color: var(--espbp-evt-schd-hvr-color);
+}
+
+
+
+.espbp-org-title-label,
+.espbp-org-email-label,
+.espbp-org-phone-label,
+.espbp-org-website-label {
+    color: var(--espbp-org-label-color);
+}
+
+.espbp-title-event,
+.espbp-organizer-email,
+.espbp-organizer-email a,
+.espbp-organizer-phone,
+.espbp-website-link-text a,
+.espbp-website-link-text {
+    color: var(--espbp-org-content-color);
+    word-break: break-all;
+}
+
+.espbp-evt-org {
+    text-align: var(--espbp-org-alignment-color);
+}
+
+/* event custom field widget */
+
+.espbp-tribe-meta-value{
+    color:var(--espbp-evt-cf-color);
+    text-align: var(--espbp-evt-csf-alignment);
+}
+
+
+/* advanced custom field */
+.espbp-acf-fields,
+.espbp-acf-chc-fields,
+.espbp-acf-btgr-fields,
+.espbp-acf-file-field,
+.espbp-acf-url-field,
+.espbp-pass-field,
+.espbp-acf-tf-field,
+.espbp-acf-rd-fields,
+.espbp-acf-chk-fields,
+.espbp-acf-sel-fields{
+    color:var(--espbp-evt-acf-color);
+}
+.espbp-label-name{
+    color:var(--espbp-evt-acf-text-color);
+}
+
+
+/* event series color  */
+.espbp-event-series .tribe-events-series-relationship-single-marker__prefix{
+    color:var(--espbp-evt-series-color);
+}
+.espbp-event-series a span.tec_series_marker__title{
+    color:var(--espbp-evt-sub-series-color);
+}
+.espbp-event-series{
+    text-align: var(--espbp-evt-series-alignment);
+}
+
+.espbp-event-series em.tribe-events-series-relationship-single-marker__icon svg{
+    display: none;
+}
+
+.espbp-field-wrap{
+    display: flex;
+    flex-direction: var(--espbp-direction-acf-field);
+    gap:var(--espbp-acf-gap-field);
+}
+.espbp-field-wrap.row{
+    align-items: center;
+}
+
+
+
+.espba-additional-field{
+    display: flex;
+    flex-direction: var(--espbp-direction-csf-field);
+    gap: var(--espbp-csf-gap-field);
+}
+.espba-additional-field.row{
+    align-items: center;
+}
+
+
+.espbp-events-details .espbp-notice-passed
+{
+  color:var(--espbp-evt-details-color);
+}
+
+.espbp-meta-additional-field {
+    --flex-direction:column;
+    display: flex;
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    flex-direction: var(--flex-direction);
+    flex-wrap: var(--flex-wrap);
+    align-content: var(--align-content);
+    gap: var(--gap);
+    text-align: var(--justify-content);  
+}

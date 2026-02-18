@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruce Decaster - Speaker, Author & Consultant</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* ==========================================================================
+           HEADER STYLES (SAME AS BEFORE)
+           ========================================================================== */
+        .modern-header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(196, 155, 99, 0.15);
+        }
+
+        .header-top {
+            background: linear-gradient(135deg, #1a2b3c 0%, #2c3e50 100%);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 8px 0;
+            font-size: 0.85rem;
+            border-bottom: 2px solid #c49b63;
+        }
+
+        .header-top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-contact a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        .header-contact a:hover { color: #c49b63; }
+        .header-contact i { margin-right: 6px; font-size: 0.8rem; color: #c49b63; }
+
+        .header-social a {
+            color: rgba(255, 255, 255, 0.9);
+            margin-left: 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            line-height: 28px;
+            font-size: 0.8rem;
+        }
+
+        .header-social a:hover {
+            background: #c49b63;
+            color: #1a2b3c;
+            transform: translateY(-2px);
+        }
+
+        .header-main {
+            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { display: flex; align-items: center; flex-shrink: 0; }
+        .logo a { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 50px; width: auto; max-width: 200px; object-fit: contain; }
+
+        .nav-menu { flex: 1; display: flex; justify-content: center; }
+        .nav-list { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-item { position: relative; }
+        
+        .nav-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover, .nav-link.active { color: #c49b63; border-bottom-color: #c49b63; }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: white;
+            min-width: 250px;
+            list-style: none;
+            padding: 12px 0;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(196, 155, 99, 0.15);
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-menu a {
+            color: #4a5a6a;
+            padding: 10px 20px;
+            display: block;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .dropdown-menu a:hover { background: rgba(196, 155, 99, 0.08); color: #c49b63; padding-left: 25px; }
+
+        .header-actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+        .btn-subscribe {
+            background: linear-gradient(135deg, #c49b63, #a17a4a);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(193, 158, 103, 0.3);
+        }
+        .btn-subscribe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(193, 158, 103, 0.4);
+            background: linear-gradient(135deg, #b38b54, #906b3d);
+        }
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+            position: relative;
+        }
+        .mobile-menu-toggle span { width: 28px; height: 2px; background: #1a2b3c; border-radius: 2px; transition: 0.3s ease-in-out; }
+
+        @media (max-width: 1260px) {
+            .header-top { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .btn-subscribe { display: none; }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 350px;
+                height: 100vh;
+                background: white;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+                padding: 100px 30px 30px;
+                transition: 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+                z-index: 1000;
+                display: block;
+                overflow-y: auto;
+            }
+            .nav-menu.active { right: 0; }
+            .nav-list { flex-direction: column; gap: 0; align-items: flex-start; }
+            .nav-item { width: 100%; }
+            .nav-link { font-size: 1.1rem; padding: 15px 0; border-bottom: 1px solid rgba(196, 155, 99, 0.1); width: 100%; }
+            .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; max-height: 0; overflow: hidden; transition: 0.3s; }
+            .dropdown.active .dropdown-menu { max-height: 500px; }
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); background: #c49b63; }
+        .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: #c49b63; }
+
+        /* ==========================================================================
+           MODERN AUTHOR FOOTER STYLES
+           ========================================================================== */
+        .modern-footer {
+            background: #1a2b3c;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            border-top: 4px solid #c49b63;
+            padding-top: 80px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* Col 1: Bio */
+        .footer-about h2 {
+            color: #c49b63;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        /* Column 1: About */
+        .footer-about .footer-logo {
+            margin-bottom: 25px;
+            display: block;
+        }
+        .footer-about .footer-logo img {
+            height: 60px;
+            filter: brightness(0) invert(1); /* Logo white karne ke liye agar dark image hai */
+        }
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+        .footer-badges {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .badge {
+            background: rgba(196, 155, 99, 0.15);
+            border: 1px solid #c49b63;
+            color: #c49b63;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Social Icons */
+        .footer-socials { display: flex; gap: 12px; }
+        .social-btn {
+            width: 38px; height: 38px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; transition: 0.3s; text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .social-btn:hover { background: #c49b63; color: #1a2b3c; transform: translateY(-5px); }
+
+        /* General Col Styles */
+        .footer-title {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .footer-title::after {
+            content: ''; position: absolute; bottom: -8px; left: 0;
+            width: 35px; height: 2px; background: #c49b63;
+        }
+
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links a i { font-size: 0.7rem; color: #c49b63; transition: 0.3s; }
+        .footer-links a:hover { color: #c49b63; padding-left: 5px; }
+
+        /* Col 4: Newsletter */
+        .footer-newsletter {
+            background: rgba(255,255,255,0.03);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(196, 155, 99, 0.2);
+        }
+        .newsletter-form { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+        .newsletter-form input {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px; border-radius: 6px; color: white; outline: none;
+        }
+        .newsletter-form input:focus { border-color: #c49b63; }
+        .btn-footer-sub {
+            background: #c49b63; color: #1a2b3c;
+            border: none; padding: 12px; border-radius: 6px;
+            font-weight: 700; cursor: pointer; transition: 0.3s;
+        }
+        .btn-footer-sub:hover { background: #e0b67d; }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 30px 0;
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 0.85rem; color: rgba(255,255,255,0.4);
+        }
+
+        /* FLOATING BACK TO TOP BUTTON */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: #c49b63;
+            color: #1a2b3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s ease-in-out;
+            text-decoration: none;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover { background: #e0b67d; transform: translateY(-5px); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1.5fr 1fr 1.5fr; }
+            .footer-col-hide { display: none; }
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 50px; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+        }
+
+        main { min-height: 800px; padding: 100px 50px; text-align: center; background: #f8f9fa; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="modern-header">
+        <div class="header-top">
+            <div class="container header-top-container">
+                <div class="header-contact">
+                    <a href="mailto:contact@brucedecaster.com"><i class="far fa-envelope"></i> contact@brucedecaster.com</a>
+                    <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                </div>
+                <div class="header-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container header-main-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./logo-1.png" alt="Bruce Decaster Logo">
+                    </a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link active">HOME</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">BOOKS</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">BLOGS</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">SPEAKING</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="btn-subscribe">SUBSCRIBE</a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Professional Author Website</h1>
+        <p>Scroll down to see the updated professional footer and floating button.</p>
+    </main>
+
+    <!-- FLOATING BACK TO TOP BUTTON -->
+    <a href="javascript:void(0)" class="back-to-top" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer Section -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Col 1: Bio -->
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <img src="./logo-1.png" alt="Bruce Decaster Logo">
+                    </a>
+                    <p class="footer-desc">
+                        Internationally renowned author and speaker, helping individuals and organizations unlock their potential through strategic leadership and transformative insights.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="badge">TEDx Speaker</span>
+                        <span class="badge">NYT Bestseller</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2:  Books  Navigation  -->
+                <div class="footer-col-hide">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Bruce</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Media Kit</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Speaking Topics</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: (Literary Works)-->
+                <div>
+                    <h4 class="footer-title">Literary Works</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Invisible Engines</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> HR Secrets</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> The Art of Serving</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Do More, Earn Less</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> All Publications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Get The Insights</h4>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Subscribe to receive exclusive book previews and leadership advice.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-footer-sub">JOIN THE LIST</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bruce Decaster. All Rights Reserved.</p>
+                <p>Privacy Policy &nbsp; | &nbsp; Terms of Service &nbsp; | &nbsp; Cookie Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.getElementById('mobileMenuToggle');
+            const navMenu = document.getElementById('navMenu');
+            const dropdowns = document.querySelectorAll('.dropdown');
+            const header = document.querySelector('.modern-header');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            // 1. Mobile Menu Toggle
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // 2. Mobile Dropdowns
+            dropdowns.forEach(dropdown => {
+                dropdown.querySelector('.nav-link').addEventListener('click', (e) => {
+                    if (window.innerWidth <= 1260) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+
+            // 3. Scroll Effects (Header & Floating Button)
+            window.addEventListener('scroll', () => {
+                // Header shrink effect
+                header.classList.toggle('scrolled', window.scrollY > 50);
+
+                // Floating Scroll Button visibility
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+
+            // 4. Back to Top Click
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 5. Reset on Resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 1260) {
+                    navMenu.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                    dropdowns.forEach(d => d.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
